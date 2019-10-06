@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!--Velocio Builder 1.1-->
+<!--www.Velocio.net-->
+<VelocioNetworks IPAddress="">
+  <Setup ProjectType="LadderLogic" />
+  <Connections>
+    <Connection sKey="SN001_Full" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="SN002_Full" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="SP001_Triggered" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="SN001_Anim" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="SN002_Anim" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="SP001_Anim" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="CH001_Triggered" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="CH001_Anim" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+  </Connections>
+  <Modbus />
+  <SubroutineInputs cellsHeigh="1">
+    <Input sAddress="SN001_Full" sIndex="" dtAddress="Bit" />
+    <Input sAddress="SN002_Full" sIndex="" dtAddress="Bit" />
+    <Input sAddress="SP001_Triggered" sIndex="" dtAddress="Bit" />
+    <Input sAddress="SN001_Anim" sIndex="" dtAddress="UI16" />
+    <Input sAddress="SN002_Anim" sIndex="" dtAddress="UI16" />
+    <Input sAddress="SP001_Anim" sIndex="" dtAddress="UI16" />
+    <Input sAddress="CH001_Triggered" sIndex="" dtAddress="Bit" />
+    <Input sAddress="CH001_Anim" sIndex="" dtAddress="UI16" />
+  </SubroutineInputs>
+  <Cells>
+    <coilCopy rung="1" row="1" column="4" cellsHeigh="1" iSortedIndex="0" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="SN001_Anim" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <blankHorizontal rung="1" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NC rung="1" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="SN001_Full" sIndex="" dtAddress="Bit" />
+    </NC>
+    <blankHorizontal rung="1" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilCopy rung="2" row="1" column="4" cellsHeigh="1" iSortedIndex="1" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="SN001_Anim" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <blankHorizontal rung="2" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="2" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="SN001_Full" sIndex="" dtAddress="Bit" />
+    </NO>
+    <blankHorizontal rung="2" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilCopy rung="3" row="1" column="4" cellsHeigh="1" iSortedIndex="2" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="SN002_Anim" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <blankHorizontal rung="3" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NC rung="3" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="SN002_Full" sIndex="" dtAddress="Bit" />
+    </NC>
+    <blankHorizontal rung="3" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilCopy rung="4" row="1" column="4" cellsHeigh="1" iSortedIndex="3" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="SN002_Anim" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <blankHorizontal rung="4" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="4" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="SN002_Full" sIndex="" dtAddress="Bit" />
+    </NO>
+    <blankHorizontal rung="4" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilCopy rung="5" row="1" column="4" cellsHeigh="1" iSortedIndex="4" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="SP001_Anim" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <blankHorizontal rung="5" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NC rung="5" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="SP001_Triggered" sIndex="" dtAddress="Bit" />
+    </NC>
+    <blankHorizontal rung="5" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilCopy rung="6" row="1" column="4" cellsHeigh="1" iSortedIndex="5" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="SP001_Anim" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <blankHorizontal rung="6" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="6" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="SP001_Triggered" sIndex="" dtAddress="Bit" />
+    </NO>
+    <blankHorizontal rung="6" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilCopy rung="7" row="1" column="4" cellsHeigh="1" iSortedIndex="6" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="CH001_Anim" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <blankHorizontal rung="7" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NC rung="7" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="CH001_Triggered" sIndex="" dtAddress="Bit" />
+    </NC>
+    <blankHorizontal rung="7" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilCopy rung="8" row="1" column="4" cellsHeigh="1" iSortedIndex="7" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="CH001_Anim" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <blankHorizontal rung="8" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="8" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="CH001_Triggered" sIndex="" dtAddress="Bit" />
+    </NO>
+    <blankHorizontal rung="8" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilReturn rung="9" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <blankHorizontal rung="9" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <blankHorizontal rung="9" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1" />
+  </Cells>
+  <Wires />
+  <Comments>
+    <Comment Index="0" bComment="False" sComment="" />
+    <Comment Index="1" bComment="False" sComment="" />
+    <Comment Index="2" bComment="False" sComment="" />
+    <Comment Index="3" bComment="False" sComment="" />
+    <Comment Index="4" bComment="False" sComment="" />
+    <Comment Index="5" bComment="False" sComment="" />
+    <Comment Index="6" bComment="False" sComment="" />
+    <Comment Index="7" bComment="False" sComment="" />
+    <Comment Index="8" bComment="False" sComment="" />
+  </Comments>
+</VelocioNetworks>

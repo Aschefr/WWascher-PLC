@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<!--Velocio Builder 1.1-->
+<!--www.Velocio.net-->
+<VelocioNetworks IPAddress="">
+  <Setup ProjectType="FlowChart" />
+  <Connections>
+    <Connection sKey="Working" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="PathWayAsk" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PathWayState" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="P1_Puissance" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="P2_Timer" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="P3_Puissance" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="P4_Timer" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PumpWorkAsk" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PumpWorkState" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PathWayExec" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="PumpWorkExec" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="RoutineState" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Rout_TempoState" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="Timer" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="Rout_TempoVal" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="Rout_TempoMax" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="TimerMath" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="TimerCurrentSeti" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PumpSelected" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="RoutineNbrExec" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PumpForceSetting" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="IterationState" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="IterationAsked" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PulseWashRun" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="PreTimer" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="WashLoopEndedMem" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="IterationMem" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+  </Connections>
+  <Modbus />
+  <SubroutineInputs cellsHeigh="4">
+    <Input sAddress="PathWayAsk" sIndex="" dtAddress="UI16" />
+    <Input sAddress="PathWayState" sIndex="" dtAddress="UI16" />
+    <Input sAddress="PathWayExec" sIndex="" dtAddress="Bit" />
+    <Input sAddress="PumpWorkAsk" sIndex="" dtAddress="UI16" />
+    <Input sAddress="PumpWorkState" sIndex="" dtAddress="UI16" />
+    <Input sAddress="PumpWorkExec" sIndex="" dtAddress="Bit" />
+    <Input sAddress="IterationAsked" sIndex="" dtAddress="UI16" />
+    <Input sAddress="IterationState" sIndex="" dtAddress="UI16" />
+    <Input sAddress="PulseWashRun" sIndex="" dtAddress="Bit" />
+    <Input sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+    <Input sAddress="P1_Puissance" sIndex="" dtAddress="UI16" />
+    <Input sAddress="P2_Timer" sIndex="" dtAddress="UI16" />
+    <Input sAddress="P3_Puissance" sIndex="" dtAddress="UI16" />
+    <Input sAddress="P4_Timer" sIndex="" dtAddress="UI16" />
+    <Input sAddress="PumpSelected" sIndex="" dtAddress="UI8" />
+  </SubroutineInputs>
+  <Cells>
+    <coilReturn rung="0" row="98" column="29" cellsHeigh="-1" iSortedIndex="4" />
+    <start rung="0" row="1" column="4" cellsHeigh="-1" iSortedIndex="-1" />
+    <wireRouter rung="0" row="44" column="30" cellsHeigh="-1" iSortedIndex="-1" />
+    <wireRouter rung="0" row="63" column="30" cellsHeigh="-1" iSortedIndex="-1" />
+    <wireRouter rung="0" row="91" column="30" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="0" row="6" column="4" cellsHeigh="-1" iSortedIndex="0">
+      <eAddress1 sAddress="PulseWashRun" sIndex="" dtAddress="Bit" />
+    </NO>
+    <Equal rung="0" row="16" column="4" cellsHeigh="-1" iSortedIndex="5">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="0" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <wireRouter rung="0" row="25" column="30" cellsHeigh="-1" iSortedIndex="-1" />
+    <Equal rung="0" row="26" column="4" cellsHeigh="-1" iSortedIndex="9">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="1" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="26" column="8" cellsHeigh="-1" iSortedIndex="10">
+      <eAddress1 sAddress="PathWayState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="PathWayAsk" sIndex="" dtAddress="UI16" />
+    </Equal>
+    <Equal rung="0" row="31" column="4" cellsHeigh="-1" iSortedIndex="16">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="2" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCopy rung="0" row="16" column="24" cellsHeigh="3" iSortedIndex="8" CopyType="standard">
+      <eKeySource sAddress="3" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayAsk" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="PathWayExec" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <coilCopy rung="0" row="19" column="24" cellsHeigh="3" iSortedIndex="15" CopyType="standard">
+      <eKeySource sAddress="5" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayAsk" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="PathWayExec" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <coilCopy rung="0" row="26" column="24" cellsHeigh="3" iSortedIndex="13" CopyType="standard">
+      <eKeySource sAddress="2" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="I32" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="PreTimer" sIndex="" dtAddress="I32" />
+    </coilCopy>
+    <coilCalc rung="0" row="26" column="16" cellsHeigh="3" iSortedIndex="12">
+      <eStoreIn sAddress="PumpWorkAsk" sIndex="" dtAddress="UI16" />
+      <Equation>
+        <mathElement sAddress="PumpSelected" sIndex="" dtAddress="UI8" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="*" sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="10" sIndex="" dtAddress="UI8" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="+" sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="P1_Puissance" sIndex="" dtAddress="UI16" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+      </Equation>
+    </coilCalc>
+    <coilTimer rung="0" row="26" column="12" cellsHeigh="3" iSortedIndex="11" myType="Timer" myTimerCommand="Start">
+      <eKeyTimer sAddress="PreTimer" sIndex="" dtAddress="I32" />
+    </coilTimer>
+    <Equal rung="0" row="16" column="16" cellsHeigh="-1" iSortedIndex="7">
+      <eAddress1 sAddress="PumpSelected" sIndex="" dtAddress="UI8" />
+      <eAddress2 sAddress="1" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="19" column="16" cellsHeigh="-1" iSortedIndex="14">
+      <eAddress1 sAddress="PumpSelected" sIndex="" dtAddress="UI8" />
+      <eAddress2 sAddress="2" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <TimerCompare rung="0" row="31" column="8" cellsHeigh="-1" iSortedIndex="17" timerCompareType="GreaterOrEqual" timeUnit="ms">
+      <eKeyTimerValue sAddress="PreTimer" sIndex="" dtAddress="I32" />
+      <eKeyDuration sAddress="500" sIndex="" dtAddress="I16" />
+    </TimerCompare>
+    <coilCopy rung="0" row="31" column="12" cellsHeigh="3" iSortedIndex="18" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PumpWorkExec" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <coilTimer rung="0" row="31" column="18" cellsHeigh="3" iSortedIndex="19" myType="Timer" myTimerCommand="Start">
+      <eKeyTimer sAddress="Timer" sIndex="" dtAddress="I32" />
+    </coilTimer>
+    <coilCopy rung="0" row="31" column="24" cellsHeigh="3" iSortedIndex="20" CopyType="standard">
+      <eKeySource sAddress="3" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="I32" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="Timer" sIndex="" dtAddress="I32" />
+    </coilCopy>
+    <Equal rung="0" row="36" column="4" cellsHeigh="-1" iSortedIndex="23">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="3" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <TimerCompare rung="0" row="36" column="8" cellsHeigh="-1" iSortedIndex="24" timerCompareType="GreaterOrEqual" timeUnit="sec">
+      <eKeyTimerValue sAddress="Timer" sIndex="" dtAddress="I32" />
+      <eKeyDuration sAddress="P2_Timer" sIndex="" dtAddress="UI16" />
+    </TimerCompare>
+    <coilCopy rung="0" row="36" column="12" cellsHeigh="3" iSortedIndex="25" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="4" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="PumpWorkExec" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <Equal rung="0" row="41" column="4" cellsHeigh="-1" iSortedIndex="26">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="4" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCalc rung="0" row="41" column="16" cellsHeigh="3" iSortedIndex="27">
+      <eStoreIn sAddress="PumpWorkAsk" sIndex="" dtAddress="UI16" />
+      <Equation>
+        <mathElement sAddress="PumpSelected" sIndex="" dtAddress="UI8" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="*" sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="10" sIndex="" dtAddress="UI8" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="+" sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="P3_Puissance" sIndex="" dtAddress="UI16" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+      </Equation>
+    </coilCalc>
+    <coilCopy rung="0" row="41" column="24" cellsHeigh="3" iSortedIndex="28" CopyType="standard">
+      <eKeySource sAddress="5" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="I32" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="PreTimer" sIndex="" dtAddress="I32" />
+    </coilCopy>
+    <Equal rung="0" row="46" column="4" cellsHeigh="-1" iSortedIndex="29">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="5" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <TimerCompare rung="0" row="46" column="8" cellsHeigh="-1" iSortedIndex="30" timerCompareType="GreaterOrEqual" timeUnit="ms">
+      <eKeyTimerValue sAddress="PreTimer" sIndex="" dtAddress="I32" />
+      <eKeyDuration sAddress="500" sIndex="" dtAddress="I16" />
+    </TimerCompare>
+    <coilCopy rung="0" row="46" column="12" cellsHeigh="3" iSortedIndex="31" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PumpWorkExec" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <coilCopy rung="0" row="46" column="24" cellsHeigh="3" iSortedIndex="32" CopyType="standard">
+      <eKeySource sAddress="6" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="I32" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="Timer" sIndex="" dtAddress="I32" />
+    </coilCopy>
+    <flowComment rung="0" row="6" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Wait run order.&#xA;If not, set routine state to 0">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <flowComment rung="0" row="16" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Selected the pathway&#xA;depending of the pump index&#xA;selected :&#xA;1 - 001PO&#xA;2 - 002PO">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <flowComment rung="0" row="26" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="When path way is reached,&#xA;start a pre timer (value fixed&#xA;to 500ms), load the pumpwork&#xA;number">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <flowComment rung="0" row="31" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="After pre timer, start the&#xA;pump.&#xA;Start the timer linked to the p2&#xA;parameter">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <flowComment rung="0" row="36" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="After P2 timer, stop pump">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <flowComment rung="0" row="41" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Load the new pumpwork&#xA;number, reset pre timer (same&#xA;value)">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <flowComment rung="0" row="46" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="After pre timer, start pump">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <Equal rung="0" row="51" column="4" cellsHeigh="-1" iSortedIndex="33">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="6" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <TimerCompare rung="0" row="51" column="8" cellsHeigh="-1" iSortedIndex="34" timerCompareType="GreaterOrEqual" timeUnit="sec">
+      <eKeyTimerValue sAddress="Timer" sIndex="" dtAddress="I32" />
+      <eKeyDuration sAddress="P4_Timer" sIndex="" dtAddress="UI16" />
+    </TimerCompare>
+    <coilCopy rung="0" row="51" column="12" cellsHeigh="3" iSortedIndex="35" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PumpWorkAsk" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="PumpWorkExec" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <flowComment rung="0" row="51" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="After P4 timer, stop pump">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <Equal rung="0" row="56" column="4" cellsHeigh="-1" iSortedIndex="38">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="7" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCalc rung="0" row="56" column="8" cellsHeigh="3" iSortedIndex="39">
+      <eStoreIn sAddress="IterationState" sIndex="" dtAddress="UI16" />
+      <Equation>
+        <mathElement sAddress="IterationMem" sIndex="" dtAddress="UI16" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="+" sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="1" sIndex="" dtAddress="UI8" />
+      </Equation>
+    </coilCalc>
+    <coilCopy rung="0" row="56" column="16" cellsHeigh="3" iSortedIndex="40" CopyType="standard">
+      <eKeySource sAddress="8" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="IterationState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="IterationMem" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <flowComment rung="0" row="56" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Increase the iteration state by&#xA;1">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <Equal rung="0" row="61" column="4" cellsHeigh="-1" iSortedIndex="41">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="8" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="61" column="8" cellsHeigh="-1" iSortedIndex="42">
+      <eAddress1 sAddress="IterationState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="IterationAsked" sIndex="" dtAddress="UI16" />
+    </Equal>
+    <coilCopy rung="0" row="64" column="12" cellsHeigh="3" iSortedIndex="46" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="61" column="12" cellsHeigh="3" iSortedIndex="43" CopyType="standard">
+      <eKeySource sAddress="9" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <flowComment rung="0" row="61" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Desicion to continue or to&#xA;restor loop state to initial">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <Equal rung="0" row="75" column="4" cellsHeigh="-1" iSortedIndex="47">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="10" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCopy rung="0" row="75" column="24" cellsHeigh="3" iSortedIndex="48" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="11" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="PathWayAsk" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <Equal rung="0" row="80" column="8" cellsHeigh="-1" iSortedIndex="50">
+      <eAddress1 sAddress="PathWayState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="PathWayAsk" sIndex="" dtAddress="UI16" />
+    </Equal>
+    <Equal rung="0" row="80" column="4" cellsHeigh="-1" iSortedIndex="49">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="11" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <flowComment rung="0" row="80" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="When pathway is restoring,&#xA;disabling the exec bit and&#xA;reseting the loop">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <NO rung="0" row="11" column="4" cellsHeigh="-1" iSortedIndex="1">
+      <eAddress1 sAddress="WashLoopEndedMem" sIndex="" dtAddress="Bit" />
+    </NO>
+    <coilCopy rung="0" row="16" column="8" cellsHeigh="3" iSortedIndex="6" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="IterationState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="IterationMem" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <flowComment rung="0" row="75" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Restoring the pathway to 0">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <Equal rung="0" row="69" column="4" cellsHeigh="-1" iSortedIndex="44">
+      <eAddress1 sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="9" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <flowComment rung="0" row="69" column="1" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="NO USE RIGHT NOW">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <Equal rung="0" row="51" column="19" cellsHeigh="-1" iSortedIndex="36">
+      <eAddress1 sAddress="PumpWorkState" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="PumpWorkAsk" sIndex="" dtAddress="UI16" />
+    </Equal>
+    <coilCopy rung="0" row="51" column="24" cellsHeigh="3" iSortedIndex="37" CopyType="standard">
+      <eKeySource sAddress="7" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="69" column="12" cellsHeigh="3" iSortedIndex="45" CopyType="standard">
+      <eKeySource sAddress="10" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <Equal rung="0" row="22" column="16" cellsHeigh="-1" iSortedIndex="21">
+      <eAddress1 sAddress="PumpSelected" sIndex="" dtAddress="UI8" />
+      <eAddress2 sAddress="3" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCopy rung="0" row="22" column="24" cellsHeigh="3" iSortedIndex="22" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayAsk" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="PathWayExec" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <coilCopy rung="0" row="80" column="22" cellsHeigh="3" iSortedIndex="52" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayExec" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="WashLoopEndedMem" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <coilCalc rung="0" row="80" column="13" cellsHeigh="3" iSortedIndex="51">
+      <eStoreIn sAddress="IterationState" sIndex="" dtAddress="UI16" />
+      <Equation>
+        <mathElement sAddress="IterationMem" sIndex="" dtAddress="UI16" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="+" sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="1" sIndex="" dtAddress="UI8" />
+      </Equation>
+    </coilCalc>
+    <coilCopy rung="0" row="11" column="8" cellsHeigh="3" iSortedIndex="2" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="IterationState" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="11" column="14" cellsHeigh="3" iSortedIndex="3" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="RoutineState" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="WashLoopEndedMem" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+  </Cells>
+  <FlowConnections>
+    <FlowConn From="1" Yes="5" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="2" Yes="3" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="3" Yes="4" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="4" Yes="0" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="5" Yes="57" dirYesFrom="down" dirYesTo="up" No="7" dirNoFrom="right" dirNoTo="up" />
+    <FlowConn From="6" Yes="58" dirYesFrom="right" dirYesTo="left" No="8" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="7" Yes="2" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="8" Yes="9" dirYesFrom="right" dirYesTo="left" No="10" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="9" Yes="15" dirYesFrom="right" dirYesTo="up" No="2" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="10" Yes="18" dirYesFrom="right" dirYesTo="left" No="22" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="11" Yes="7" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="12" Yes="7" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="13" Yes="2" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="14" Yes="13" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="15" Yes="14" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="16" Yes="11" dirYesFrom="right" dirYesTo="left" No="17" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="17" Yes="12" dirYesFrom="right" dirYesTo="left" No="65" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="18" Yes="19" dirYesFrom="right" dirYesTo="left" No="2" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="19" Yes="20" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="20" Yes="21" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="21" Yes="2" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="22" Yes="23" dirYesFrom="right" dirYesTo="left" No="25" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="23" Yes="24" dirYesFrom="right" dirYesTo="left" No="2" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="24" Yes="2" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="25" Yes="26" dirYesFrom="right" dirYesTo="left" No="28" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="26" Yes="27" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="27" Yes="2" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="28" Yes="29" dirYesFrom="right" dirYesTo="left" No="39" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="29" Yes="30" dirYesFrom="right" dirYesTo="left" No="3" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="30" Yes="31" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="31" Yes="3" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="39" Yes="40" dirYesFrom="right" dirYesTo="left" No="43" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="40" Yes="41" dirYesFrom="right" dirYesTo="left" No="3" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="41" Yes="62" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="43" Yes="44" dirYesFrom="right" dirYesTo="left" No="47" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="44" Yes="45" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="45" Yes="3" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="47" Yes="48" dirYesFrom="right" dirYesTo="left" No="60" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="48" Yes="50" dirYesFrom="right" dirYesTo="left" No="49" dirNoFrom="down" dirNoTo="left" />
+    <FlowConn From="49" Yes="4" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="50" Yes="3" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="52" Yes="53" dirYesFrom="right" dirYesTo="left" No="55" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="53" Yes="4" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="54" Yes="68" dirYesFrom="right" dirYesTo="left" No="4" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="55" Yes="54" dirYesFrom="right" dirYesTo="left" No="4" dirNoFrom="down" dirNoTo="left" />
+    <FlowConn From="57" Yes="69" dirYesFrom="right" dirYesTo="left" No="6" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="58" Yes="16" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="60" Yes="64" dirYesFrom="right" dirYesTo="left" No="52" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="62" Yes="63" dirYesFrom="right" dirYesTo="left" No="3" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="63" Yes="3" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="64" Yes="4" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="65" Yes="66" dirYesFrom="right" dirYesTo="left" No="7" dirNoFrom="down" dirNoTo="left" />
+    <FlowConn From="66" Yes="7" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="67" Yes="4" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="68" Yes="67" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="69" Yes="70" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="70" Yes="7" dirYesFrom="right" dirYesTo="up" />
+  </FlowConnections>
+  <Wires />
+  <Comments />
+</VelocioNetworks>

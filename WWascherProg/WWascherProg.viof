@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<!--Velocio Builder 1.1-->
+<!--www.Velocio.net-->
+<VelocioNetworks IPAddress="">
+  <Setup ProjectType="FlowChart" />
+  <Subroutine Name="ValveObj.viols" iObjectInstances="7" />
+  <Subroutine Name="If7to1.viofs" iObjectInstances="1" />
+  <Connections>
+    <Connection sKey="vFactoryPage" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="InI16A1" iPort="0" iPin="1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I16" dataSource="input" />
+    <Connection sKey="InI16A2" iPort="0" iPin="2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I16" dataSource="input" />
+    <Connection sKey="InI16A3" iPort="0" iPin="3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I16" dataSource="input" />
+    <Connection sKey="SerialRXA1" bIsSerialRX="True" iPort="0" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="SerialTXA1" bISSerialTX="True" iPort="0" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="In_001SN_NO" iPort="1" iPin="1" iDebounce="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="input" />
+    <Connection sKey="In_002SN_NO" iPort="1" iPin="2" iDebounce="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="input" />
+    <Connection sKey="In_001SP_NC" iPort="1" iPin="3" iDebounce="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="input" />
+    <Connection sKey="InBitB4" iPort="1" iPin="4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="input" />
+    <Connection sKey="InBitB5" iPort="1" iPin="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="input" />
+    <Connection sKey="InBitB6" iPort="1" iPin="6" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="input" />
+    <Connection sKey="Out_001PO_On" iPort="2" iPin="1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_001PO_Full" iPort="2" iPin="2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_003PO_On" iPort="2" iPin="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_001VK_OUV" iPort="3" iPin="2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_002VK_OUV" iPort="3" iPin="3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_003VK_OUV" iPort="3" iPin="4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_004VK_OUV" iPort="3" iPin="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_005VK_13" iPort="3" iPin="6" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_006VK_13" iPort="4" iPin="1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_007VK_13" iPort="4" iPin="2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_002PO_Full" iPort="2" iPin="4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_002PO_On" iPort="2" iPin="3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="Out_003PO_Full" iPort="2" iPin="6" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="OutBitE3" iPort="4" iPin="3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="OutBitE4" iPort="4" iPin="4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="OutBitE5" iPort="4" iPin="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="OutBitE6" iPort="4" iPin="6" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="output" />
+    <Connection sKey="InFloatF1" iPort="5" iPin="1" myThermType="K" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="input" />
+    <Connection sKey="InFloatF2" iPort="5" iPin="2" myThermType="K" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="input" />
+    <Connection sKey="InFloatF3" iPort="5" iPin="3" myThermType="J" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="input" />
+    <Connection sKey="InFloatF4" iPort="5" iPin="4" myThermType="J" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="input" />
+    <Connection sKey="VE_TempI32_0" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_0" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_0" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="Valve001VK" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Valve002VK" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="ValveExecTime" iModbusStart="8" iModbusEnd="8" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="PingScreenMdbus" iModbusStart="1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="PongScreenMdbus" iModbusStart="2" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="PingScreenCycle" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="RR_VlvTorInitS" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="V_001VK_State" iModbusStart="1" iModbusEnd="1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="V_001VK_Open" iModbusStart="4" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_001VK_Close" iModbusStart="3" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_001VK_Init" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_002VK_Init" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_002VK_State" iModbusStart="2" iModbusEnd="2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="V_002VK_Open" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_002VK_Close" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_003VK_Open" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_003VK_Close" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_003VK_Init" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_004VK_Open" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_004VK_Close" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_004VK_Init" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_005VK_12" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_005VK_13" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_005VK_Init" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_006VK_12" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_006VK_13" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_006VK_Init" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_007VK_12" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_007VK_13" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_007VK_Init" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_003VK_State" iModbusStart="3" iModbusEnd="3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="V_004VK_State" iModbusStart="4" iModbusEnd="4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="V_005VK_State" iModbusStart="5" iModbusEnd="5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="V_006VK_State" iModbusStart="6" iModbusEnd="6" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="V_007VK_State" iModbusStart="7" iModbusEnd="7" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="P_001PO_State" iModbusStart="8" iModbusEnd="8" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="P_002PO_State" iModbusStart="9" iModbusEnd="9" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="P_003PO_State" iModbusStart="10" iModbusEnd="10" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="Valve003VK" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Valve004VK" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Valve005VK" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Valve006VK" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Valve007VK" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Pump001PO" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Pump002PO" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Pump003PO" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="V_005VK_Open" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_006VK_Open" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_007VK_Open" bRemoteWritable="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_Init_Ended" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="AllValveInitOK" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="V_Init_Error" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+  </Connections>
+  <Modbus>
+    <eModbusIDNumber sAddress="1" sIndex="" dtAddress="UI8" />
+  </Modbus>
+  <SubroutineInputs cellsHeigh="0" />
+  <Cells>
+    <start rung="0" row="2" column="12" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="0" row="12" column="12" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="PongScreenMdbus" sIndex="" dtAddress="Bit" />
+    </NO>
+    <coilTimer rung="0" row="14" column="8" cellsHeigh="3" iSortedIndex="-1" myType="Timer" myTimerCommand="Start">
+      <eKeyTimer sAddress="PingScreenCycle" sIndex="" dtAddress="I32" />
+    </coilTimer>
+    <coilCopy rung="0" row="7" column="11" cellsHeigh="3" iSortedIndex="-1" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PingScreenMdbus" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <TimerCompare rung="0" row="18" column="8" cellsHeigh="-1" iSortedIndex="-1" timerCompareType="GreaterOrEqual" timeUnit="sec">
+      <eKeyTimerValue sAddress="PingScreenCycle" sIndex="" dtAddress="I32" />
+      <eKeyDuration sAddress="1" sIndex="" dtAddress="UI8" />
+    </TimerCompare>
+    <coilTimer rung="0" row="21" column="5" cellsHeigh="3" iSortedIndex="-1" myType="Timer" myTimerCommand="Reset">
+      <eKeyTimer sAddress="PingScreenCycle" sIndex="" dtAddress="I32" />
+    </coilTimer>
+    <coilReset rung="0" row="25" column="5" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="PingScreenMdbus" sIndex="" dtAddress="Bit" />
+    </coilReset>
+    <coilSubroutine rung="0" row="13" column="23" cellsHeigh="5" iSortedIndex="-1" SubroutineName="ValveObj.viols" bIsEmbeddedSub="false">
+      <eKeyDataSetNumber sAddress="Valve001VK" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="RR_VlvTorInitS" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="InitStateSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="ValveExecTime" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="ExecTimeSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_001VK_State" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="CurrentState" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="True" />
+      <eLocal sAddress="V_001VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskOpen13" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_001VK_Close" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskClose12" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_001VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskInit" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+    </coilSubroutine>
+    <coilSubroutine rung="0" row="19" column="23" cellsHeigh="5" iSortedIndex="-1" SubroutineName="ValveObj.viols" bIsEmbeddedSub="false">
+      <eKeyDataSetNumber sAddress="Valve002VK" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="RR_VlvTorInitS" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="InitStateSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="ValveExecTime" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="ExecTimeSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_002VK_State" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="CurrentState" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="True" />
+      <eLocal sAddress="V_002VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskOpen13" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_002VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskClose12" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_002VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskInit" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+    </coilSubroutine>
+    <coilSubroutine rung="0" row="25" column="23" cellsHeigh="5" iSortedIndex="-1" SubroutineName="ValveObj.viols" bIsEmbeddedSub="false">
+      <eKeyDataSetNumber sAddress="Valve003VK" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="RR_VlvTorInitS" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="InitStateSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="ValveExecTime" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="ExecTimeSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_003VK_State" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="CurrentState" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="True" />
+      <eLocal sAddress="V_003VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskOpen13" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_003VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskClose12" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_003VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskInit" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+    </coilSubroutine>
+    <coilSubroutine rung="0" row="31" column="23" cellsHeigh="5" iSortedIndex="-1" SubroutineName="ValveObj.viols" bIsEmbeddedSub="false">
+      <eKeyDataSetNumber sAddress="Valve004VK" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="RR_VlvTorInitS" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="InitStateSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="ValveExecTime" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="ExecTimeSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_004VK_State" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="CurrentState" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="True" />
+      <eLocal sAddress="V_004VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskOpen13" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_004VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskClose12" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_004VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskInit" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+    </coilSubroutine>
+    <coilSubroutine rung="0" row="37" column="23" cellsHeigh="5" iSortedIndex="-1" SubroutineName="ValveObj.viols" bIsEmbeddedSub="false">
+      <eKeyDataSetNumber sAddress="Valve005VK" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="RR_VlvTorInitS" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="InitStateSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="ValveExecTime" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="ExecTimeSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_005VK_State" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="CurrentState" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="True" />
+      <eLocal sAddress="V_005VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskOpen13" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_005VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskClose12" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_005VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskInit" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+    </coilSubroutine>
+    <coilSubroutine rung="0" row="43" column="23" cellsHeigh="5" iSortedIndex="-1" SubroutineName="ValveObj.viols" bIsEmbeddedSub="false">
+      <eKeyDataSetNumber sAddress="Valve006VK" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="RR_VlvTorInitS" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="InitStateSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="ValveExecTime" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="ExecTimeSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_006VK_State" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="CurrentState" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="True" />
+      <eLocal sAddress="V_006VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskOpen13" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_006VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskClose12" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_006VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskInit" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+    </coilSubroutine>
+    <coilSubroutine rung="0" row="49" column="23" cellsHeigh="5" iSortedIndex="-1" SubroutineName="ValveObj.viols" bIsEmbeddedSub="false">
+      <eKeyDataSetNumber sAddress="Valve007VK" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="RR_VlvTorInitS" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="InitStateSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="ValveExecTime" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="ExecTimeSetting" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_007VK_State" sIndex="" dtAddress="UI8" />
+      <eSub sAddress="CurrentState" sIndex="" dtAddress="UI8" />
+      <bPassByRefOrFromEmbedded value="True" />
+      <eLocal sAddress="V_007VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskOpen13" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_007VK_Open" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskClose12" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_007VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AskInit" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+    </coilSubroutine>
+    <coilCopy rung="0" row="13" column="16" cellsHeigh="5" iSortedIndex="-1" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_Init" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_002VK_Init" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_Init" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_Init" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_005VK_Init" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Init" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <coilSubroutine rung="0" row="55" column="23" cellsHeigh="7" iSortedIndex="-1" SubroutineName="If7to1.viofs" bIsEmbeddedSub="false">
+      <eKeyDataSetNumber sAddress="AllValveInitOK" sIndex="" dtAddress="UI16" />
+      <eLocal sAddress="V_001VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="In01" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_002VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="In02" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_003VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="In03" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_004VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="In04" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_005VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="In05" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_006VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="In06" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_007VK_Init" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="In07" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="False" />
+      <eLocal sAddress="V_Init_Ended" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="AllOk" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="True" />
+      <eLocal sAddress="V_Init_Error" sIndex="" dtAddress="Bit" />
+      <eSub sAddress="Error" sIndex="" dtAddress="Bit" />
+      <bPassByRefOrFromEmbedded value="True" />
+    </coilSubroutine>
+  </Cells>
+  <FlowConnections>
+    <FlowConn From="0" Yes="3" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="1" Yes="14" dirYesFrom="down" dirYesTo="left" No="2" dirNoFrom="left" dirNoTo="up" />
+    <FlowConn From="2" Yes="4" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="3" Yes="1" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="4" Yes="5" dirYesFrom="left" dirYesTo="up" No="1" dirNoFrom="right" dirNoTo="up" />
+    <FlowConn From="5" Yes="6" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="6" Yes="3" dirYesFrom="left" dirYesTo="up" />
+    <FlowConn From="7" Yes="8" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="8" Yes="9" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="9" Yes="10" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="10" Yes="11" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="11" Yes="12" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="12" Yes="13" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="13" Yes="15" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="14" Yes="7" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="15" Yes="7" dirYesFrom="right" dirYesTo="up" />
+  </FlowConnections>
+  <Wires />
+  <Comments />
+</VelocioNetworks>

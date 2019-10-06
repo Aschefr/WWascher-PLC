@@ -1,0 +1,3 @@
+S#,Variable name, Adress ,Word/Bit,
+1,testBit,0x0,0,
+2,TestWord,3x_D0,1,

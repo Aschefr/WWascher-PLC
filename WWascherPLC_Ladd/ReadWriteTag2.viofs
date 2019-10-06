@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!--Velocio Builder 1.1-->
+<!--www.Velocio.net-->
+<VelocioNetworks IPAddress="">
+  <Setup ProjectType="FlowChart" />
+  <Connections>
+    <Connection sKey="ReadOrSave" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="Cinv01" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Cinv02" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Cinv03" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Cinv04" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Short01" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Short02" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Short03" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Short04" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="ReadDone" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ReadError" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="WriteDone" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="WriteError" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ValveInvert01" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ValveInvert02" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ValveInvert03" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ValveInvert04" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ValveInvert05" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ValveInvert06" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ValveInvert07" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+  </Connections>
+  <Modbus />
+  <SubroutineInputs cellsHeigh="5">
+    <Input sAddress="ReadOrSave" sIndex="" dtAddress="Bit" />
+    <Input sAddress="Cinv01" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Cinv02" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Cinv03" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Cinv04" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Short01" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Short02" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Short03" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Short04" sIndex="" dtAddress="UI16" />
+    <Input sAddress="ValveInvert01" sIndex="" dtAddress="Bit" />
+    <Input sAddress="ValveInvert02" sIndex="" dtAddress="Bit" />
+    <Input sAddress="ValveInvert03" sIndex="" dtAddress="Bit" />
+    <Input sAddress="ValveInvert04" sIndex="" dtAddress="Bit" />
+    <Input sAddress="ValveInvert05" sIndex="" dtAddress="Bit" />
+    <Input sAddress="ValveInvert06" sIndex="" dtAddress="Bit" />
+    <Input sAddress="ValveInvert07" sIndex="" dtAddress="Bit" />
+  </SubroutineInputs>
+  <Cells>
+    <start rung="0" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NC rung="0" row="5" column="1" cellsHeigh="-1" iSortedIndex="0">
+      <eAddress1 sAddress="ReadOrSave" sIndex="" dtAddress="Bit" />
+    </NC>
+    <coilDataLog rung="0" row="5" column="7" cellsHeigh="3" iSortedIndex="1" iCellsWideOverride="5" myDataLogToolType="readRequest" Log="MyLogData2">
+      <eRecordNumber sAddress="2" sIndex="" dtAddress="UI16" />
+      <eReadyBit sAddress="ReadDone" sIndex="" dtAddress="Bit" />
+      <eErrorBit sAddress="ReadError" sIndex="" dtAddress="Bit" />
+    </coilDataLog>
+    <NO rung="0" row="5" column="14" cellsHeigh="-1" iSortedIndex="2">
+      <eAddress1 sAddress="ReadDone" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NO rung="0" row="9" column="14" cellsHeigh="-1" iSortedIndex="7">
+      <eAddress1 sAddress="ReadError" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NO rung="0" row="15" column="14" cellsHeigh="-1" iSortedIndex="6">
+      <eAddress1 sAddress="WriteDone" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NO rung="0" row="19" column="14" cellsHeigh="-1" iSortedIndex="8">
+      <eAddress1 sAddress="WriteError" sIndex="" dtAddress="Bit" />
+    </NO>
+    <coilReturn rung="0" row="21" column="25" cellsHeigh="-1" iSortedIndex="4" />
+    <coilDataLog rung="0" row="2" column="20" cellsHeigh="9" iSortedIndex="3" iCellsWideOverride="5" myDataLogToolType="transfer" Log="MyLogData2">
+      <eRecordNumber sAddress="1" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Cinv01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Cinv02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Cinv03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Cinv04" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Short01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Short02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Short03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Short04" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="ValveInvert01" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert02" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert03" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert04" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert05" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert06" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert07" sIndex="" dtAddress="Bit" />
+    </coilDataLog>
+    <coilDataLog rung="0" row="11" column="6" cellsHeigh="11" iSortedIndex="5" iCellsWideOverride="5" myDataLogToolType="write" Log="MyLogData2">
+      <eRecordNumber sAddress="2" sIndex="" dtAddress="UI16" />
+      <eReadyBit sAddress="WriteDone" sIndex="" dtAddress="Bit" />
+      <eErrorBit sAddress="WriteError" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="Cinv01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Cinv02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Cinv03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Cinv04" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Short01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Short02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Short03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Short04" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="ValveInvert01" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert02" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert03" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert04" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert05" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert06" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="ValveInvert07" sIndex="" dtAddress="Bit" />
+    </coilDataLog>
+  </Cells>
+  <FlowConnections>
+    <FlowConn From="0" Yes="1" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="1" Yes="2" dirYesFrom="right" dirYesTo="left" No="9" dirNoFrom="down" dirNoTo="left" />
+    <FlowConn From="2" Yes="3" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="3" Yes="8" dirYesFrom="right" dirYesTo="left" No="4" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="4" Yes="7" dirYesFrom="right" dirYesTo="up" No="3" dirNoFrom="left" dirNoTo="left" />
+    <FlowConn From="5" Yes="7" dirYesFrom="right" dirYesTo="up" No="6" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="6" Yes="7" dirYesFrom="right" dirYesTo="up" No="5" dirNoFrom="left" dirNoTo="left" />
+    <FlowConn From="8" Yes="7" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="9" Yes="5" dirYesFrom="right" dirYesTo="left" />
+  </FlowConnections>
+  <Wires />
+  <Comments />
+</VelocioNetworks>

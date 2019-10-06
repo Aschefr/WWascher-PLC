@@ -1,0 +1,737 @@
+<?xml version="1.0"?>
+<!--Velocio Builder 1.1-->
+<!--www.Velocio.net-->
+<VelocioNetworks IPAddress="">
+  <Setup ProjectType="FlowChart" />
+  <Connections>
+    <Connection sKey="PathWayAsked" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PathWayExec" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="PathWayState" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="PathWayTimer" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_001VK_CmdOpen" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_001VK_CmdClose" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_002VK_CmdOpen" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_002VK_CmdClose" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_003VK_CmdOpen" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_003VK_CmdClose" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_004VK_CmdOpen" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_004VK_CmdClose" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_005VK_Cmd12" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_005VK_Cmd13" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_006VK_Cmd12" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_006VK_Cmd13" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_007VK_Cmd12" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="V_007VK_Cmd13" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="PathWayTemporary" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Timer" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="ExecMem" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ValveTimerSettin" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="ValveTimerMath" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+  </Connections>
+  <Modbus />
+  <SubroutineInputs cellsHeigh="5">
+    <Input sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+    <Input sAddress="PathWayExec" sIndex="" dtAddress="Bit" />
+    <Input sAddress="PathWayState" sIndex="" dtAddress="UI16" />
+    <Input sAddress="PathWayTimer" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_001VK_CmdClose" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_002VK_CmdClose" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_002VK_CmdOpen" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_003VK_CmdClose" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_003VK_CmdOpen" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_004VK_CmdClose" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_004VK_CmdOpen" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_005VK_Cmd12" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_006VK_Cmd12" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+    <Input sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+    <Input sAddress="ValveTimerSettin" sIndex="" dtAddress="UI16" />
+  </SubroutineInputs>
+  <Cells>
+    <start rung="0" row="1" column="11" cellsHeigh="-1" iSortedIndex="-1" />
+    <GreaterEqual rung="0" row="35" column="15" cellsHeigh="-1" iSortedIndex="21">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="1" sIndex="" dtAddress="UI8" />
+    </GreaterEqual>
+    <LessEqual rung="0" row="35" column="18" cellsHeigh="-1" iSortedIndex="22">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="19" sIndex="" dtAddress="UI8" />
+    </LessEqual>
+    <flowComment rung="0" row="29" column="31" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Position Initial">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <coilCopy rung="0" row="34" column="24" cellsHeigh="5" iSortedIndex="23" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_002VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdOpen" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <flowComment rung="0" row="35" column="31" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="If asked is between 1 and 19,&#xA;circulation direction 1 is asked.&#xA;Opening the according valve">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <GreaterEqual rung="0" row="41" column="15" cellsHeigh="-1" iSortedIndex="26">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="20" sIndex="" dtAddress="UI8" />
+    </GreaterEqual>
+    <LessEqual rung="0" row="41" column="18" cellsHeigh="-1" iSortedIndex="27">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="39" sIndex="" dtAddress="UI8" />
+    </LessEqual>
+    <coilCopy rung="0" row="40" column="24" cellsHeigh="5" iSortedIndex="28" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_002VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdClose" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <flowComment rung="0" row="41" column="31" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="If asked is between 20 and 39,&#xA;circulation direction 2 is asked.&#xA;Opening the according valve">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <GreaterEqual rung="0" row="47" column="15" cellsHeigh="-1" iSortedIndex="31">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="40" sIndex="" dtAddress="UI8" />
+    </GreaterEqual>
+    <LessEqual rung="0" row="47" column="18" cellsHeigh="-1" iSortedIndex="32">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="49" sIndex="" dtAddress="UI8" />
+    </LessEqual>
+    <coilCopy rung="0" row="46" column="24" cellsHeigh="5" iSortedIndex="33" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_002VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdOpen" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <wireRouter rung="0" row="36" column="5" cellsHeigh="-1" iSortedIndex="-1" />
+    <flowComment rung="0" row="47" column="31" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Position center open">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <Equal rung="0" row="63" column="29" cellsHeigh="-1" iSortedIndex="29">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="2" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="68" column="29" cellsHeigh="-1" iSortedIndex="34">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="3" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="78" column="29" cellsHeigh="-1" iSortedIndex="43">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="5" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="83" column="29" cellsHeigh="-1" iSortedIndex="47">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="6" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <wireRouter rung="0" row="88" column="40" cellsHeigh="-1" iSortedIndex="-1" />
+    <Equal rung="0" row="89" column="29" cellsHeigh="-1" iSortedIndex="51">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="20" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="104" column="29" cellsHeigh="-1" iSortedIndex="61">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="23" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="109" column="29" cellsHeigh="-1" iSortedIndex="63">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="24" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="114" column="29" cellsHeigh="-1" iSortedIndex="65">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="25" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="99" column="29" cellsHeigh="-1" iSortedIndex="59">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="22" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="94" column="29" cellsHeigh="-1" iSortedIndex="55">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="21" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <wireRouter rung="0" row="120" column="40" cellsHeigh="-1" iSortedIndex="-1" />
+    <Equal rung="0" row="121" column="29" cellsHeigh="-1" iSortedIndex="67">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="40" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="126" column="29" cellsHeigh="-1" iSortedIndex="69">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="41" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <wireRouter rung="0" row="131" column="40" cellsHeigh="-1" iSortedIndex="-1" />
+    <flowComment rung="0" row="69" column="42" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="PathWays details for 005, 006&#xA;and 007VK for direction 1">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <flowComment rung="0" row="100" column="42" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="PathWays details for 005, 006&#xA;and 007VK for direction 2">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <flowComment rung="0" row="122" column="42" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="PathWays details for 005, 006&#xA;and 007VK for open center">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <coilReturn rung="0" row="156" column="39" cellsHeigh="-1" iSortedIndex="16" />
+    <wireRouter rung="0" row="154" column="40" cellsHeigh="-1" iSortedIndex="-1" />
+    <GreaterEqual rung="0" row="54" column="15" cellsHeigh="-1" iSortedIndex="36">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="50" sIndex="" dtAddress="UI8" />
+    </GreaterEqual>
+    <Equal rung="0" row="54" column="18" cellsHeigh="-1" iSortedIndex="37">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="50" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCopy rung="0" row="53" column="22" cellsHeigh="5" iSortedIndex="38" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="50" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_001VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_002VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <Equal rung="0" row="63" column="18" cellsHeigh="-1" iSortedIndex="41">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="51" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="70" column="18" cellsHeigh="-1" iSortedIndex="45">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="52" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCopy rung="0" row="69" column="22" cellsHeigh="5" iSortedIndex="46" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="52" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_001VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="78" column="22" cellsHeigh="5" iSortedIndex="50" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="53" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <Equal rung="0" row="79" column="18" cellsHeigh="-1" iSortedIndex="49">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="53" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <Equal rung="0" row="88" column="18" cellsHeigh="-1" iSortedIndex="53">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="54" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCopy rung="0" row="94" column="22" cellsHeigh="5" iSortedIndex="58" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="55" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <Equal rung="0" row="95" column="18" cellsHeigh="-1" iSortedIndex="57">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="55" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <wireRouter rung="0" row="55" column="13" cellsHeigh="-1" iSortedIndex="-1" />
+    <wireRouter rung="0" row="101" column="27" cellsHeigh="-1" iSortedIndex="-1" />
+    <wireRouter rung="0" row="50" column="30" cellsHeigh="-1" iSortedIndex="-1" />
+    <Equal rung="0" row="53" column="29" cellsHeigh="-1" iSortedIndex="6">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="0" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCopy rung="0" row="52" column="33" cellsHeigh="5" iSortedIndex="7" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <Equal rung="0" row="58" column="29" cellsHeigh="-1" iSortedIndex="24">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="1" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCopy rung="0" row="57" column="33" cellsHeigh="5" iSortedIndex="25" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="62" column="33" cellsHeigh="5" iSortedIndex="30" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="2" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="67" column="33" cellsHeigh="5" iSortedIndex="35" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="3" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <Equal rung="0" row="73" column="29" cellsHeigh="-1" iSortedIndex="39">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="4" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <coilCopy rung="0" row="72" column="33" cellsHeigh="5" iSortedIndex="40" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="4" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="77" column="33" cellsHeigh="5" iSortedIndex="44" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="5" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="82" column="33" cellsHeigh="5" iSortedIndex="48" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="6" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="88" column="33" cellsHeigh="5" iSortedIndex="52" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="20" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="93" column="33" cellsHeigh="5" iSortedIndex="56" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="21" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="98" column="33" cellsHeigh="5" iSortedIndex="60" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="22" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="103" column="33" cellsHeigh="5" iSortedIndex="62" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="23" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="108" column="33" cellsHeigh="5" iSortedIndex="64" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="24" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="113" column="33" cellsHeigh="5" iSortedIndex="66" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="25" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="120" column="33" cellsHeigh="5" iSortedIndex="68" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="40" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="125" column="33" cellsHeigh="5" iSortedIndex="70" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="41" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_005VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="62" column="22" cellsHeigh="5" iSortedIndex="42" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="51" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_002VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="87" column="22" cellsHeigh="5" iSortedIndex="54" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="54" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <coilCopy rung="0" row="28" column="24" cellsHeigh="5" iSortedIndex="5" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_002VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdClose" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <Equal rung="0" row="29" column="15" cellsHeigh="-1" iSortedIndex="4">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="0" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <wireRouter rung="0" row="50" column="40" cellsHeigh="-1" iSortedIndex="-1" />
+    <TimerCompare rung="0" row="137" column="39" cellsHeigh="-1" iSortedIndex="9" timerCompareType="GreaterOrEqual" timeUnit="sec">
+      <eKeyTimerValue sAddress="Timer" sIndex="" dtAddress="I32" />
+      <eKeyDuration sAddress="ValveTimerMath" sIndex="" dtAddress="UI16" />
+    </TimerCompare>
+    <wireRouter rung="0" row="138" column="35" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilSet rung="0" row="137" column="43" cellsHeigh="-1" iSortedIndex="10">
+      <eAddress1 sAddress="PathWayTimer" sIndex="" dtAddress="Bit" />
+    </coilSet>
+    <coilTimer rung="0" row="141" column="39" cellsHeigh="3" iSortedIndex="12" myType="Timer" myTimerCommand="Pause">
+      <eKeyTimer sAddress="Timer" sIndex="" dtAddress="I32" />
+    </coilTimer>
+    <coilTimer rung="0" row="144" column="39" cellsHeigh="3" iSortedIndex="13" myType="Timer" myTimerCommand="Reset">
+      <eKeyTimer sAddress="Timer" sIndex="" dtAddress="I32" />
+    </coilTimer>
+    <NO rung="0" row="147" column="39" cellsHeigh="-1" iSortedIndex="14">
+      <eAddress1 sAddress="PathWayTimer" sIndex="" dtAddress="Bit" />
+    </NO>
+    <flowComment rung="0" row="5" column="22" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Exec if bit=1 and asked not&#xA;equal to state">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <coilCopy rung="0" row="131" column="47" cellsHeigh="9" iSortedIndex="11" CopyType="standard">
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_001VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_002VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_002VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_003VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdClose" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_004VK_CmdOpen" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_005VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_005VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_006VK_Cmd13" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd12" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="V_007VK_Cmd13" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <coilCalc rung="0" row="133" column="37" cellsHeigh="3" iSortedIndex="8">
+      <eStoreIn sAddress="ValveTimerMath" sIndex="" dtAddress="UI16" />
+      <Equation>
+        <mathElement sAddress="ValveTimerSettin" sIndex="" dtAddress="UI16" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="-" sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress=" " sIndex="" dtAddress="Symbol" />
+        <mathElement sAddress="0" sIndex="" dtAddress="UI8" />
+      </Equation>
+    </coilCalc>
+    <wireRouter rung="0" row="50" column="5" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilCopy rung="0" row="150" column="43" cellsHeigh="3" iSortedIndex="15" CopyType="standard">
+      <eKeySource sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+      <eKeyDestination sAddress="PathWayState" sIndex="" dtAddress="UI16" />
+    </coilCopy>
+    <NotEqual rung="0" row="5" column="11" cellsHeigh="-1" iSortedIndex="0">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="PathWayState" sIndex="" dtAddress="UI16" />
+    </NotEqual>
+    <coilCopy rung="0" row="22" column="7" cellsHeigh="3" iSortedIndex="20" CopyType="standard">
+      <eKeySource sAddress="1" sIndex="" dtAddress="Bit" />
+      <eKeySource sAddress="0" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="ExecMem" sIndex="" dtAddress="Bit" />
+      <eKeyDestination sAddress="PathWayExec" sIndex="" dtAddress="Bit" />
+    </coilCopy>
+    <wireRouter rung="0" row="23" column="5" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilReturn rung="0" row="24" column="1" cellsHeigh="-1" iSortedIndex="18" />
+    <coilReset rung="0" row="18" column="5" cellsHeigh="-1" iSortedIndex="17">
+      <eAddress1 sAddress="ExecMem" sIndex="" dtAddress="Bit" />
+    </coilReset>
+    <coilTimer rung="0" row="25" column="15" cellsHeigh="3" iSortedIndex="3" myType="Timer" myTimerCommand="Start">
+      <eKeyTimer sAddress="Timer" sIndex="" dtAddress="I32" />
+    </coilTimer>
+    <NotEqual rung="0" row="21" column="15" cellsHeigh="-1" iSortedIndex="2">
+      <eAddress1 sAddress="PathWayAsked" sIndex="" dtAddress="UI16" />
+      <eAddress2 sAddress="PathWayTemporary" sIndex="" dtAddress="UI16" />
+    </NotEqual>
+    <NO rung="0" row="9" column="11" cellsHeigh="-1" iSortedIndex="1">
+      <eAddress1 sAddress="ExecMem" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NO rung="0" row="13" column="11" cellsHeigh="-1" iSortedIndex="19">
+      <eAddress1 sAddress="PathWayExec" sIndex="" dtAddress="Bit" />
+    </NO>
+  </Cells>
+  <FlowConnections>
+    <FlowConn From="0" Yes="83" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="1" Yes="2" dirYesFrom="right" dirYesTo="left" No="13" dirNoFrom="down" dirNoTo="down" />
+    <FlowConn From="2" Yes="4" dirYesFrom="right" dirYesTo="left" No="6" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="4" Yes="48" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="6" Yes="7" dirYesFrom="right" dirYesTo="left" No="13" dirNoFrom="down" dirNoTo="down" />
+    <FlowConn From="7" Yes="8" dirYesFrom="right" dirYesTo="left" No="10" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="8" Yes="48" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="10" Yes="11" dirYesFrom="right" dirYesTo="left" No="81" dirNoFrom="down" dirNoTo="right" />
+    <FlowConn From="11" Yes="12" dirYesFrom="right" dirYesTo="left" No="35" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="12" Yes="48" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="13" Yes="85" dirYesFrom="up" dirYesTo="down" />
+    <FlowConn From="15" Yes="53" dirYesFrom="right" dirYesTo="left" No="16" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="16" Yes="54" dirYesFrom="right" dirYesTo="left" No="55" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="17" Yes="57" dirYesFrom="right" dirYesTo="left" No="18" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="18" Yes="58" dirYesFrom="right" dirYesTo="left" No="20" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="19" Yes="26" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="20" Yes="59" dirYesFrom="right" dirYesTo="left" No="25" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="21" Yes="62" dirYesFrom="right" dirYesTo="left" No="22" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="22" Yes="63" dirYesFrom="right" dirYesTo="left" No="23" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="23" Yes="64" dirYesFrom="right" dirYesTo="left" No="27" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="24" Yes="61" dirYesFrom="right" dirYesTo="left" No="21" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="25" Yes="60" dirYesFrom="right" dirYesTo="left" No="24" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="26" Yes="29" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="27" Yes="65" dirYesFrom="right" dirYesTo="left" No="28" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="28" Yes="66" dirYesFrom="right" dirYesTo="left" No="29" dirNoFrom="down" dirNoTo="left" />
+    <FlowConn From="29" Yes="80" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="34" Yes="33" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="35" Yes="36" dirYesFrom="right" dirYesTo="left" No="46" dirNoFrom="left" dirNoTo="right" />
+    <FlowConn From="36" Yes="37" dirYesFrom="right" dirYesTo="left" No="38" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="37" Yes="47" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="38" Yes="67" dirYesFrom="right" dirYesTo="left" No="39" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="39" Yes="40" dirYesFrom="right" dirYesTo="left" No="42" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="40" Yes="47" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="41" Yes="47" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="42" Yes="41" dirYesFrom="right" dirYesTo="left" No="43" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="43" Yes="68" dirYesFrom="right" dirYesTo="left" No="45" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="44" Yes="47" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="45" Yes="44" dirYesFrom="right" dirYesTo="left" No="46" dirNoFrom="left" dirNoTo="down" />
+    <FlowConn From="46" Yes="81" dirYesFrom="left" dirYesTo="down" />
+    <FlowConn From="47" Yes="29" dirYesFrom="down" dirYesTo="left" />
+    <FlowConn From="48" Yes="49" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="49" Yes="50" dirYesFrom="right" dirYesTo="left" No="51" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="50" Yes="19" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="51" Yes="52" dirYesFrom="right" dirYesTo="left" No="15" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="52" Yes="19" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="53" Yes="19" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="54" Yes="19" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="55" Yes="56" dirYesFrom="right" dirYesTo="left" No="17" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="56" Yes="19" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="57" Yes="19" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="58" Yes="19" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="59" Yes="26" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="60" Yes="26" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="61" Yes="26" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="62" Yes="26" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="63" Yes="26" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="64" Yes="26" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="65" Yes="29" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="66" Yes="29" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="67" Yes="47" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="68" Yes="47" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="69" Yes="48" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="70" Yes="69" dirYesFrom="right" dirYesTo="left" No="1" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="71" Yes="19" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="72" Yes="74" dirYesFrom="right" dirYesTo="left" No="73" dirNoFrom="left" dirNoTo="right" />
+    <FlowConn From="73" Yes="34" dirYesFrom="down" dirYesTo="left" />
+    <FlowConn From="74" Yes="79" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="75" Yes="76" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="76" Yes="77" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="77" Yes="82" dirYesFrom="right" dirYesTo="up" No="34" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="79" Yes="75" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="80" Yes="72" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="81" Yes="13" dirYesFrom="up" dirYesTo="down" />
+    <FlowConn From="82" Yes="34" dirYesFrom="down" dirYesTo="right" />
+    <FlowConn From="83" Yes="90" dirYesFrom="down" dirYesTo="up" No="87" dirNoFrom="left" dirNoTo="up" />
+    <FlowConn From="84" Yes="85" dirYesFrom="left" dirYesTo="right" />
+    <FlowConn From="85" Yes="86" dirYesFrom="up" dirYesTo="up" />
+    <FlowConn From="87" Yes="86" dirYesFrom="left" dirYesTo="up" />
+    <FlowConn From="88" Yes="70" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="89" Yes="88" dirYesFrom="down" dirYesTo="up" No="71" dirNoFrom="right" dirNoTo="up" />
+    <FlowConn From="90" Yes="89" dirYesFrom="right" dirYesTo="up" No="91" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="91" Yes="84" dirYesFrom="left" dirYesTo="up" No="87" dirNoFrom="down" dirNoTo="up" />
+  </FlowConnections>
+  <Wires />
+  <Comments />
+</VelocioNetworks>

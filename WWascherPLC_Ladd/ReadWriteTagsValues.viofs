@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--Velocio Builder 1.1-->
+<!--www.Velocio.net-->
+<VelocioNetworks IPAddress="">
+  <Setup ProjectType="FlowChart" />
+  <Connections>
+    <Connection sKey="ReadOrSave" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ReadDone" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ReadError" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="WriteDone" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="WriteError" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="LogBitValue" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ValvesWaitValue" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="R_001CH_SetPoint" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="register" />
+    <Connection sKey="R_001CH_TtlTime" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I16" dataSource="register" />
+    <Connection sKey="R_AgrsvThreshold" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I16" dataSource="register" />
+    <Connection sKey="Cinv01" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Cinv02" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Cinv03" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Cinv04" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="High01" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="High02" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="High03" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="High04" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Long01" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Long02" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Long03" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Long04" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Purg01" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Purg02" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Purg03" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Purg04" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Short01" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Short02" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Short03" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="Short04" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="register" />
+    <Connection sKey="ReadDone1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ReadError1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="WriteDone1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="WriteError1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+  </Connections>
+  <Modbus />
+  <SubroutineInputs cellsHeigh="5">
+    <Input sAddress="ReadOrSave" sIndex="" dtAddress="Bit" />
+    <Input sAddress="ValvesWaitValue" sIndex="" dtAddress="UI16" />
+    <Input sAddress="R_001CH_SetPoint" sIndex="" dtAddress="Float" />
+    <Input sAddress="R_001CH_TtlTime" sIndex="" dtAddress="I16" />
+    <Input sAddress="R_AgrsvThreshold" sIndex="" dtAddress="I16" />
+    <Input sAddress="High01" sIndex="" dtAddress="UI16" />
+    <Input sAddress="High02" sIndex="" dtAddress="UI16" />
+    <Input sAddress="High03" sIndex="" dtAddress="UI16" />
+    <Input sAddress="High04" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Long01" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Long02" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Long03" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Long04" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Purg01" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Purg02" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Purg03" sIndex="" dtAddress="UI16" />
+    <Input sAddress="Purg04" sIndex="" dtAddress="UI16" />
+  </SubroutineInputs>
+  <Cells>
+    <start rung="0" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NC rung="0" row="5" column="1" cellsHeigh="-1" iSortedIndex="0">
+      <eAddress1 sAddress="ReadOrSave" sIndex="" dtAddress="Bit" />
+    </NC>
+    <coilDataLog rung="0" row="5" column="5" cellsHeigh="3" iSortedIndex="1" iCellsWideOverride="5" myDataLogToolType="readRequest" Log="MyLogData">
+      <eRecordNumber sAddress="1" sIndex="" dtAddress="UI16" />
+      <eReadyBit sAddress="ReadDone" sIndex="" dtAddress="Bit" />
+      <eErrorBit sAddress="ReadError" sIndex="" dtAddress="Bit" />
+    </coilDataLog>
+    <NO rung="0" row="5" column="13" cellsHeigh="-1" iSortedIndex="2">
+      <eAddress1 sAddress="ReadDone" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NO rung="0" row="9" column="13" cellsHeigh="-1" iSortedIndex="7">
+      <eAddress1 sAddress="ReadError" sIndex="" dtAddress="Bit" />
+    </NO>
+    <coilDataLog rung="0" row="13" column="5" cellsHeigh="11" iSortedIndex="5" iCellsWideOverride="5" myDataLogToolType="write" Log="MyLogData">
+      <eRecordNumber sAddress="1" sIndex="" dtAddress="UI16" />
+      <eReadyBit sAddress="WriteDone" sIndex="" dtAddress="Bit" />
+      <eErrorBit sAddress="WriteError" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="R_001CH_SetPoint" sIndex="" dtAddress="Float" />
+      <eElement sAddress="ValvesWaitValue" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="R_001CH_TtlTime" sIndex="" dtAddress="I16" />
+      <eElement sAddress="R_AgrsvThreshold" sIndex="" dtAddress="I16" />
+      <eElement sAddress="High01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="High02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="High03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="High04" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Long01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Long02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Long03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Long04" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Purg01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Purg02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Purg03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Purg04" sIndex="" dtAddress="UI16" />
+    </coilDataLog>
+    <NO rung="0" row="14" column="13" cellsHeigh="-1" iSortedIndex="6">
+      <eAddress1 sAddress="WriteDone" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NO rung="0" row="18" column="13" cellsHeigh="-1" iSortedIndex="8">
+      <eAddress1 sAddress="WriteError" sIndex="" dtAddress="Bit" />
+    </NO>
+    <coilReturn rung="0" row="20" column="23" cellsHeigh="-1" iSortedIndex="4" />
+    <flowComment rung="0" row="1" column="4" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Simple example of SubRoutine&#xA;for save and read 2 tags&#xA;named Logi32Value and&#xA;LogBitValue.&#xA;&#xA;ReadOrSave=0 for read&#xA;ReadOrSave=1 for save">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+    <coilDataLog rung="0" row="1" column="17" cellsHeigh="9" iSortedIndex="3" iCellsWideOverride="5" myDataLogToolType="transfer" Log="MyLogData">
+      <eElement sAddress="R_001CH_SetPoint" sIndex="" dtAddress="Float" />
+      <eElement sAddress="ValvesWaitValue" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="R_001CH_TtlTime" sIndex="" dtAddress="I16" />
+      <eElement sAddress="R_AgrsvThreshold" sIndex="" dtAddress="I16" />
+      <eElement sAddress="High01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="High02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="High03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="High04" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Long01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Long02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Long03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Long04" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Purg01" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Purg02" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Purg03" sIndex="" dtAddress="UI16" />
+      <eElement sAddress="Purg04" sIndex="" dtAddress="UI16" />
+    </coilDataLog>
+    <wireRouter rung="0" row="17" column="2" cellsHeigh="-1" iSortedIndex="-1" />
+  </Cells>
+  <FlowConnections>
+    <FlowConn From="0" Yes="1" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="1" Yes="2" dirYesFrom="right" dirYesTo="left" No="11" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="2" Yes="3" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="3" Yes="10" dirYesFrom="right" dirYesTo="left" No="4" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="4" Yes="8" dirYesFrom="right" dirYesTo="up" No="3" dirNoFrom="left" dirNoTo="left" />
+    <FlowConn From="5" Yes="6" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="6" Yes="8" dirYesFrom="right" dirYesTo="up" No="7" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="7" Yes="8" dirYesFrom="right" dirYesTo="up" No="6" dirNoFrom="left" dirNoTo="left" />
+    <FlowConn From="10" Yes="8" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="11" Yes="5" dirYesFrom="right" dirYesTo="left" />
+  </FlowConnections>
+  <Wires />
+  <Comments />
+</VelocioNetworks>

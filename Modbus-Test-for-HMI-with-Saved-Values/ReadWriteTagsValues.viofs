@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!--Velocio Builder 1.1-->
+<!--www.Velocio.net-->
+<VelocioNetworks IPAddress="">
+  <Setup ProjectType="FlowChart" />
+  <Connections>
+    <Connection sKey="ReadOrSave" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="ReadDone" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="MyWordValue" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="ReadError" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="WriteDone" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="WriteError" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="Logi32Value" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="LogBitValue" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+  </Connections>
+  <Modbus />
+  <SubroutineInputs cellsHeigh="2">
+    <Input sAddress="ReadOrSave" sIndex="" dtAddress="Bit" />
+    <Input sAddress="Logi32Value" sIndex="" dtAddress="I32" />
+    <Input sAddress="LogBitValue" sIndex="" dtAddress="Bit" />
+  </SubroutineInputs>
+  <Cells>
+    <start rung="0" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NC rung="0" row="5" column="1" cellsHeigh="-1" iSortedIndex="0">
+      <eAddress1 sAddress="ReadOrSave" sIndex="" dtAddress="Bit" />
+    </NC>
+    <coilDataLog rung="0" row="5" column="5" cellsHeigh="3" iSortedIndex="1" iCellsWideOverride="5" myDataLogToolType="readRequest" Log="MyLogData">
+      <eRecordNumber sAddress="1" sIndex="" dtAddress="UI16" />
+      <eReadyBit sAddress="ReadDone" sIndex="" dtAddress="Bit" />
+      <eErrorBit sAddress="ReadError" sIndex="" dtAddress="Bit" />
+    </coilDataLog>
+    <coilDataLog rung="0" row="5" column="15" cellsHeigh="3" iSortedIndex="3" iCellsWideOverride="5" myDataLogToolType="transfer" Log="MyLogData">
+      <eElement sAddress="Logi32Value" sIndex="" dtAddress="I32" />
+      <eElement sAddress="LogBitValue" sIndex="" dtAddress="Bit" />
+    </coilDataLog>
+    <NO rung="0" row="5" column="11" cellsHeigh="-1" iSortedIndex="2">
+      <eAddress1 sAddress="ReadDone" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NO rung="0" row="9" column="11" cellsHeigh="-1" iSortedIndex="7">
+      <eAddress1 sAddress="ReadError" sIndex="" dtAddress="Bit" />
+    </NO>
+    <coilDataLog rung="0" row="12" column="5" cellsHeigh="5" iSortedIndex="5" iCellsWideOverride="5" myDataLogToolType="write" Log="MyLogData">
+      <eRecordNumber sAddress="1" sIndex="" dtAddress="UI16" />
+      <eReadyBit sAddress="WriteDone" sIndex="" dtAddress="Bit" />
+      <eErrorBit sAddress="WriteError" sIndex="" dtAddress="Bit" />
+      <eElement sAddress="Logi32Value" sIndex="" dtAddress="I32" />
+      <eElement sAddress="LogBitValue" sIndex="" dtAddress="Bit" />
+    </coilDataLog>
+    <wireRouter rung="0" row="14" column="2" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="0" row="13" column="11" cellsHeigh="-1" iSortedIndex="6">
+      <eAddress1 sAddress="WriteDone" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NO rung="0" row="17" column="11" cellsHeigh="-1" iSortedIndex="8">
+      <eAddress1 sAddress="WriteError" sIndex="" dtAddress="Bit" />
+    </NO>
+    <coilReturn rung="0" row="19" column="25" cellsHeigh="-1" iSortedIndex="4" />
+    <flowComment rung="0" row="1" column="4" cellsHeigh="-1" iSortedIndex="-1" sTextUnformatted="" sText="Simple example of SubRoutine&#xA;for save and read 2 tags&#xA;named Logi32Value and&#xA;LogBitValue.&#xA;&#xA;ReadOrSave=0 for read&#xA;ReadOrSave=1 for save">
+      <bDown value="False" />
+      <bLeft value="False" />
+      <bLeftDown value="False" />
+      <bLeftUp value="False" />
+      <bRight value="False" />
+      <bRightDown value="False" />
+      <bRightUp value="False" />
+      <bUp value="False" />
+    </flowComment>
+  </Cells>
+  <FlowConnections>
+    <FlowConn From="0" Yes="1" dirYesFrom="down" dirYesTo="up" />
+    <FlowConn From="1" Yes="2" dirYesFrom="right" dirYesTo="left" No="7" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="2" Yes="4" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="3" Yes="10" dirYesFrom="right" dirYesTo="up" />
+    <FlowConn From="4" Yes="3" dirYesFrom="right" dirYesTo="left" No="5" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="5" Yes="10" dirYesFrom="right" dirYesTo="up" No="4" dirNoFrom="left" dirNoTo="left" />
+    <FlowConn From="6" Yes="8" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="7" Yes="6" dirYesFrom="right" dirYesTo="left" />
+    <FlowConn From="8" Yes="10" dirYesFrom="right" dirYesTo="up" No="9" dirNoFrom="down" dirNoTo="up" />
+    <FlowConn From="9" Yes="10" dirYesFrom="right" dirYesTo="up" No="8" dirNoFrom="left" dirNoTo="left" />
+  </FlowConnections>
+  <Wires />
+  <Comments />
+</VelocioNetworks>

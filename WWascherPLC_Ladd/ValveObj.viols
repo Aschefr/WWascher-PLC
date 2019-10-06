@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!--Velocio Builder 1.1-->
+<!--www.Velocio.net-->
+<VelocioNetworks IPAddress="">
+  <Setup ProjectType="LadderLogic" />
+  <Connections>
+    <Connection sKey="VE_TempI32_0" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_0" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_0" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_1" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_2" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_3" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_4" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="VE_TempI32_5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="temporary" />
+    <Connection sKey="VE_TempFloat_5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Float" dataSource="temporary" />
+    <Connection sKey="VE_TempUI16_5" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI16" dataSource="temporary" />
+    <Connection sKey="ExecTimeSetting" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="ExecTime" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="I32" dataSource="register" />
+    <Connection sKey="InitState" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="CurrentState" bPassedByRef="True" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="UI8" dataSource="register" />
+    <Connection sKey="AskOpen" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="AskClose" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="FirstRun" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="AskOpenMem" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="AskCloseMem" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="AskInitMem" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="TimerEnded" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="AskInit" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+    <Connection sKey="InitOrder" ui32Mask="0" ui32MessageId="0" ui32Period="0" dataType="Bit" dataSource="register" />
+  </Connections>
+  <Modbus />
+  <SubroutineInputs cellsHeigh="1">
+    <Input sAddress="ExecTimeSetting" sIndex="" dtAddress="UI8" />
+    <Input sAddress="InitState" sIndex="" dtAddress="UI8" />
+    <Input sAddress="CurrentState" sIndex="" dtAddress="UI8" />
+    <Input sAddress="AskOpen" sIndex="" dtAddress="Bit" />
+    <Input sAddress="AskClose" sIndex="" dtAddress="Bit" />
+    <Input sAddress="InitOrder" sIndex="" dtAddress="Bit" />
+  </SubroutineInputs>
+  <Cells>
+    <coilSet rung="1" row="1" column="5" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskInitMem" sIndex="" dtAddress="Bit" />
+    </coilSet>
+    <blankHorizontal rung="1" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NC rung="1" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="FirstRun" sIndex="" dtAddress="Bit" />
+    </NC>
+    <NC rung="1" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskInitMem" sIndex="" dtAddress="Bit" />
+    </NC>
+    <blankHorizontal rung="1" row="1" column="4" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilSet rung="2" row="1" column="5" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskInitMem" sIndex="" dtAddress="Bit" />
+    </coilSet>
+    <blankHorizontal rung="2" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="2" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskInit" sIndex="" dtAddress="Bit" />
+    </NO>
+    <blankHorizontal rung="2" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <blankHorizontal rung="2" row="1" column="4" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilTimer rung="3" row="1" column="4" cellsHeigh="1" iSortedIndex="-1" myType="Timer" myTimerCommand="Start">
+      <eKeyTimer sAddress="ExecTime" sIndex="" dtAddress="I32" />
+    </coilTimer>
+    <blankHorizontal rung="3" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="3" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskCloseMem" sIndex="" dtAddress="Bit" />
+    </NO>
+    <blankHorizontal rung="3" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilOut rung="4" row="1" column="6" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskClose" sIndex="" dtAddress="Bit" />
+    </coilOut>
+    <blankHorizontal rung="4" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="4" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskCloseMem" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NC rung="4" row="1" column="4" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="TimerEnded" sIndex="" dtAddress="Bit" />
+    </NC>
+    <blankHorizontal rung="4" row="1" column="5" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilOut rung="5" row="1" column="6" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskOpen" sIndex="" dtAddress="Bit" />
+    </coilOut>
+    <blankHorizontal rung="5" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="5" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskOpenMem" sIndex="" dtAddress="Bit" />
+    </NO>
+    <NC rung="5" row="1" column="4" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="TimerEnded" sIndex="" dtAddress="Bit" />
+    </NC>
+    <blankHorizontal rung="5" row="1" column="5" cellsHeigh="-1" iSortedIndex="-1" />
+    <NO rung="3" row="2" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskOpenMem" sIndex="" dtAddress="Bit" />
+    </NO>
+    <coilSet rung="6" row="1" column="4" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="TimerEnded" sIndex="" dtAddress="Bit" />
+    </coilSet>
+    <blankHorizontal rung="6" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <TimerCompare rung="6" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1" timerCompareType="GreaterOrEqual" timeUnit="sec">
+      <eKeyTimerValue sAddress="ExecTime" sIndex="" dtAddress="I32" />
+      <eKeyDuration sAddress="ExecTimeSetting" sIndex="" dtAddress="UI8" />
+    </TimerCompare>
+    <blankHorizontal rung="6" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <Equal rung="4" row="2" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="InitState" sIndex="" dtAddress="UI8" />
+      <eAddress2 sAddress="0" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <NO rung="4" row="2" column="3" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskInitMem" sIndex="" dtAddress="Bit" />
+    </NO>
+    <blankHorizontal rung="4" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <Equal rung="5" row="2" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="InitState" sIndex="" dtAddress="UI8" />
+      <eAddress2 sAddress="0" sIndex="" dtAddress="UI8" />
+    </Equal>
+    <NO rung="5" row="2" column="3" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="AskInitMem" sIndex="" dtAddress="Bit" />
+    </NO>
+    <blankHorizontal rung="5" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <Rise rung="2" row="2" column="2" cellsHeigh="-1" iSortedIndex="-1">
+      <eAddress1 sAddress="InitOrder" sIndex="" dtAddress="Bit" />
+    </Rise>
+    <blankHorizontal rung="2" row="2" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <coilReturn rung="7" row="1" column="3" cellsHeigh="-1" iSortedIndex="-1" />
+    <blankHorizontal rung="7" row="1" column="1" cellsHeigh="-1" iSortedIndex="-1" />
+    <blankHorizontal rung="7" row="1" column="2" cellsHeigh="-1" iSortedIndex="-1" />
+  </Cells>
+  <Wires>
+    <Wire iRung="3" iRow="1" iColumn="1" />
+    <Wire iRung="3" iRow="1" iColumn="2" />
+    <Wire iRung="4" iRow="1" iColumn="1" />
+    <Wire iRung="4" iRow="1" iColumn="3" />
+    <Wire iRung="5" iRow="1" iColumn="1" />
+    <Wire iRung="5" iRow="1" iColumn="3" />
+    <Wire iRung="2" iRow="1" iColumn="1" />
+    <Wire iRung="2" iRow="1" iColumn="3" />
+  </Wires>
+  <Comments>
+    <Comment Index="0" bComment="True" sComment="First Run Init" />
+    <Comment Index="1" bComment="True" sComment="Initialisation" />
+    <Comment Index="2" bComment="True" sComment="Timer" />
+    <Comment Index="3" bComment="True" sComment="Closing Valve" />
+    <Comment Index="4" bComment="True" sComment="Opening Valve" />
+    <Comment Index="5" bComment="False" sComment="" />
+    <Comment Index="6" bComment="False" sComment="" />
+  </Comments>
+</VelocioNetworks>

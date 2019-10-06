@@ -1,0 +1,11 @@
+Name:Chauffe002BARecipe
+Description:Chauffe de la 002BA
+Recipe Length:3
+Number of Recipe:1
+Data Type:16-Bit Unsigned Int
+Write Recipe To PLC:No
+Whether from PLC read address:No
+RECIPE1,
+0,
+0,
+0,

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--Velocio.net-->
+<!--vBuilder DataLog File 1.0-->
+<DataLog sName="MyLogData" bIncludeDataTime="False" iRecords="1">
+  <DataLogConnection sKey="MyBitLoged" dataType="Bit" dataSource="register" />
+  <DataLogConnection sKey="MyWordLoged" dataType="I32" dataSource="register" />
+  <DataLogConnection sKey="Myi32Loged" dataType="I32" dataSource="register" />
+  <DataLogConnection sKey="Myi32Logged" dataType="I32" dataSource="register" />
+  <DataLogConnection sKey="MyBitLogged" dataType="Bit" dataSource="register" />
+  <DataLogConnection sKey="Log_001CH_SetPoi" dataType="Float" dataSource="register" />
+  <DataLogConnection sKey="Log_ValveWaitVal" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Log_001CH_TolTim" dataType="I16" dataSource="register" />
+  <DataLogConnection sKey="Log_001CH_Thresh" dataType="I16" dataSource="register" />
+  <DataLogConnection sKey="Rout_High01" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_High02" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_High03" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_High04" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_Long01" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_Long02" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_Long03" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_Long04" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_Purg01" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_Purg02" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_Purg03" dataType="UI16" dataSource="register" />
+  <DataLogConnection sKey="Rout_Purg04" dataType="UI16" dataSource="register" />
+  <DataLogItem sAddress="Log_001CH_SetPoi" sIndex="" dtAddress="Float" />
+  <DataLogItem sAddress="Log_ValveWaitVal" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Log_001CH_TolTim" sIndex="" dtAddress="I16" />
+  <DataLogItem sAddress="Log_001CH_Thresh" sIndex="" dtAddress="I16" />
+  <DataLogItem sAddress="Rout_High01" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_High02" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_High03" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_High04" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_Long01" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_Long02" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_Long03" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_Long04" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_Purg01" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_Purg02" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_Purg03" sIndex="" dtAddress="UI16" />
+  <DataLogItem sAddress="Rout_Purg04" sIndex="" dtAddress="UI16" />
+</DataLog>

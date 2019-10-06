@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--Velocio.net-->
+<!--vBuilder DataLog File 1.0-->
+<DataLog sName="MyLogData" bIncludeDataTime="False" iRecords="2">
+  <DataLogConnection sKey="MyBitLoged" dataType="Bit" dataSource="register" />
+  <DataLogConnection sKey="MyWordLoged" dataType="I32" dataSource="register" />
+  <DataLogConnection sKey="Myi32Loged" dataType="I32" dataSource="register" />
+  <DataLogConnection sKey="Myi32Logged" dataType="I32" dataSource="register" />
+  <DataLogConnection sKey="MyBitLogged" dataType="Bit" dataSource="register" />
+  <DataLogItem sAddress="Myi32Logged" sIndex="" dtAddress="I32" />
+  <DataLogItem sAddress="MyBitLogged" sIndex="" dtAddress="Bit" />
+</DataLog>
